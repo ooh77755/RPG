@@ -26,7 +26,7 @@ namespace RPG.Control
 
                 if(Input.GetMouseButtonDown(0))
                 {
-                    GetComponent<Fighter>().Attack();
+                    GetComponent<Fighter>().Attack(target);
                 }
                 return true;
             }
