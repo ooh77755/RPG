@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace RPG.Combat
+namespace RPG.Core
 {
     public class ActionScheduler : MonoBehaviour
     {
-        MonoBehaviour currentAction;
+        IAction currentAction;
 
-        public void StartAction(MonoBehaviour action)
+        public void StartAction(IAction action)
         {
             if(currentAction == action)
             {
@@ -17,7 +17,7 @@ namespace RPG.Combat
 
             if (currentAction != null)
             {
-                print("Cancelling" + currentAction);
+                currentAction.Cancel();
             }
             currentAction = action;
         }
