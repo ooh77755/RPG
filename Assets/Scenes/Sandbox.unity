@@ -908,6 +908,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6881626905302610245, guid: 33b73f5128cc07648b9675b3a56c3260,
+        type: 3}
+      propertyPath: attackCooldown
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33b73f5128cc07648b9675b3a56c3260, type: 3}
 --- !u!1001 &3610145736638427458
