@@ -2,26 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class health : MonoBehaviour
+public class Health : MonoBehaviour
 {
     [SerializeField] float objectHealth = 100f;
+
+    bool isDead = false;
     
     public void TakeDamage(float damage)
     {
         //like writing 'objectHealth -= damage' but ensures objectHealth doesn't go below 0
         objectHealth = Mathf.Max(objectHealth - damage, 0);
-        print(objectHealth);
-    }
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+
+        if (objectHealth == 0 && !isDead)
+        {
+            Die();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Die()
     {
-        
+        GetComponent<Animator>().SetTrigger("isDying");
+        isDead = true;
     }
 }

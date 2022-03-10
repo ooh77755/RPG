@@ -122,6 +122,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 824d7d2dd647bb443adced8689f2727b, type: 2}
+--- !u!4 &18865439 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3994009520274122483, guid: 22e8b73746503dd4689553681dd08e46,
+    type: 3}
+  m_PrefabInstance: {fileID: 1498632846}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &680968603
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -989,7 +995,7 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 18865439}
     - target: {fileID: 4462527065454982623, guid: 690452098aad57f429f9331e43665850,
         type: 3}
       propertyPath: m_LocalPosition.x
