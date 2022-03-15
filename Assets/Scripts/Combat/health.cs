@@ -7,6 +7,11 @@ public class Health : MonoBehaviour
     [SerializeField] float objectHealth = 100f;
 
     bool isDead = false;
+
+    public bool IsDead()
+    {
+        return isDead;
+    }
     
     public void TakeDamage(float damage)
     {
