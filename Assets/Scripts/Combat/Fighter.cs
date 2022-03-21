@@ -43,6 +43,7 @@ namespace RPG.Combat
 
             if (timeSinceLastAttack > attackCooldown)
             {
+                GetComponent<Animator>().ResetTrigger("stopAttack");
                 GetComponent<Animator>().SetTrigger("isAttacking");
                 timeSinceLastAttack = 0;
             }
@@ -51,7 +52,8 @@ namespace RPG.Combat
         //Anim event
         void Hit()
         {
-                target.TakeDamage(weaponDamage);
+            if (target == null) return;
+            target.TakeDamage(weaponDamage);
         }
 
         private bool GetIsInRange()
@@ -78,6 +80,7 @@ namespace RPG.Combat
 
         public void Cancel()
         {
+            GetComponent<Animator>().ResetTrigger("isAttacking");
             GetComponent<Animator>().SetTrigger("stopAttack");
             target = null;
         }
